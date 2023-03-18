@@ -1,9 +1,8 @@
 module Main (main) where
 
-import Lib
 import Trie
 
 main :: IO ()
-main = print (put (put (Root []) ['T', 'e', 's', 't', 'i', 'n', 'g']) ['T', 'e', 's', 't'])
-                    
+main = print (containsPrefix ['T', 'e', 's'] trie)
+  where trie = put ['T', 'e', 's', 't'] (put ['T', 'e', 's', 't', 'i', 'n', 'g'] (Root []))
  
